@@ -1,0 +1,34 @@
+.tag {
+  background-color: #ff6060;
+  border-radius: 10px;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 14px;
+  margin: auto 10px;
+  min-width: 115px;
+  padding: 5px 15px;
+  text-align: center;
+}
+.tag:first-of-type {
+  margin-left: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0;
+    & .tag {
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .tags {
+    & .tag {
+        font-size: 10px
+    }
+  }
+}

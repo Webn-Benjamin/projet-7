@@ -1,0 +1,53 @@
+.carrousel {
+  display: block;
+  height: 415px;
+  margin: auto auto 2rem auto;
+  position: relative;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  & .fleche {
+    position: absolute;
+    width: 45px;
+    z-index: 1;
+    &:hover {
+      cursor: pointer;
+      filter: drop-shadow(2px 4px 6px black);
+    }
+  }
+  & .fleche-gauche {
+    margin-left: 25px;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+  }
+  & .fleche-droite {
+    margin-right: 25px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  & .carrousel-img {
+    height: 100%;
+    object-fit: cover;
+    display: none;
+    width: 100%;
+  }
+  & .carrousel-img.actif {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carrousel {
+    height: 255px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .carrousel .fleche {
+    width: 11.67px;
+  }
+}

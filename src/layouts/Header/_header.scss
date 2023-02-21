@@ -1,0 +1,30 @@
+header {
+    display: flex;
+    align-items: center;
+    margin: 0 auto 2rem;
+    margin-top: 1rem;
+    max-width: 1240px;
+    & img {
+        width: 20%;
+    }
+    & nav {
+        display: flex;
+        gap: 2rem;
+        margin-left: auto;
+        & a {
+            text-decoration: none;
+            color: #FF6060;
+            font-size: 24px;
+            font-weight: 500;
+        }
+        & a.active {
+    border-bottom: 2px solid #ff6060;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+  header {
+    padding: 0 1rem;
+  }
+}
